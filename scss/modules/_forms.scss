@@ -1,0 +1,71 @@
+// ==========================================================================
+// FORMS
+// ==========================================================================
+form {
+
+}
+
+// TITLES AND LABELS
+// ==========================================================================
+
+label {
+	display: block;
+	margin-bottom: $pSpacer/2;
+}
+
+
+// FORM FIELDS
+// ==========================================================================
+
+%inputBase {
+	display: block;
+	width: 100%;
+	margin-bottom: $fieldSpacer;
+	border: solid 1px #fff;
+
+	&:focus {
+		outline: none;
+		border-color: $accentColor;
+	}
+}
+
+// text (and text-like) inputs
+// -------------------------------------------------------------------------
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+	@extend %inputBase;
+	height: $fieldHeight;
+	padding: $fieldPadding;
+}
+
+// textarea
+// -------------------------------------------------------------------------
+textarea {
+	@extend %inputBase;	
+	padding: $fieldPadding;
+}
+
+// select
+// -------------------------------------------------------------------------
+select {
+	@extend %inputBase;
+	height: $fieldHeight;	
+	padding: 0.5em; //default padding causes cutoff text in FF, this fixes it
+}	
+
+// file
+// -------------------------------------------------------------------------
+input[type="file"] {
+	margin-bottom: $fieldSpacer;
+	margin-top: $fieldSpacer/3;
+}	
+
+// submit
+// -------------------------------------------------------------------------
+
+// code below just removes browser defaults 
+// use the standard button class in your markup
+input[type="submit"]{
+	border: none;
+}

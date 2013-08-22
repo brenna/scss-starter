@@ -1,0 +1,46 @@
+/*
+* 
+* Your site title goes here!
+*
+*/
+
+// RESET & UTILITIES
+// ---------------------------------------------------------
+// Reset all to the aweseome border-box box model
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@import "base/_normalize.scss";
+@import "base/_utilities.scss";
+
+// BASE STYLES
+// ---------------------------------------------------------
+@import "base/_vars.scss"; //colours, measures etc.
+@import "base/_type.scss";
+@import "base/_grid.scss";
+@import "base/_layout.scss";
+@import "base/_common.scss"; //site wide styles
+
+// MODULES
+// ---------------------------------------------------------
+// create as needed, but here are some commonly used modules
+@import "modules/_buttons.scss";
+@import "modules/_forms.scss";
+
+// VENDOR 
+// ---------------------------------------------------------
+// for including third party css in your main stylesheet
+// eg. @import "vendor/_icomoon.scss"
+
+// REGIONS
+// ---------------------------------------------------------
+// create as needed, but try to stick with using modules
+@import "regions/_header.scss";
+@import "regions/_footer.scss";
+
+
+// STOP! Don't add any styles here! 
+// Everything should have a home in a partial.

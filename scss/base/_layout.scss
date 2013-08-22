@@ -1,0 +1,64 @@
+// ==========================================================================
+// LAYOUT
+// ==========================================================================
+
+// VERTICAL SPACING
+// ==========================================================================
+.row {
+	margin-bottom: 2em;
+}
+
+// HORIZONTAL LIST
+// ==========================================================================
+ul.horizontal {
+	@include clearfix;
+	list-style-type: none;
+	padding-left: 0;
+
+	li {
+		float: left;
+		margin: $listItemSpacer;
+
+		&:first-child {margin-left: 0;}
+		&:last-child {margin-right: 0;}
+	}
+}
+
+// HORIZONTAL CENTERING
+// ==========================================================================
+// for variable width elements
+.h-center {
+	position: relative;
+	left: 50%;
+}
+
+.h-center-inner {
+	position: relative;
+	left: -50%;
+}
+
+// MEDIA OBJECT
+// ==========================================================================
+.media,
+.media-body {
+	overflow: hidden;
+
+	img {display: block;}
+}
+
+.media-img {
+	float: left;
+	margin-right: 1em;
+}
+
+.media-img-right {
+	float: right;
+	margin-left: 1em;
+}
+
+// MEDIA
+// ==========================================================================
+
+img {
+	max-width: 100%;
+}

@@ -1,0 +1,27 @@
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+// You'll definitely need to tailor these styles, 
+// but here's a sensible base class and an example extension.
+
+%button-base {
+	display: inline-block;
+	height: 2.5em;
+	margin-bottom: $pSpacer;
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+	box-shadow: $shadow;
+	line-height: 2.5em; 
+	text-align: center;
+}
+
+.button {
+	@extend %button-base;
+	background-color: $accentColor;
+	color: #fff;
+
+	&:hover {
+		background-color: lighten($accentColor, 10);
+		color: #fff;
+	}
+}

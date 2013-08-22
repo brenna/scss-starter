@@ -1,0 +1,144 @@
+// ==========================================================================
+// TYPOGRAPHY
+// ==========================================================================
+
+// GLOBAL TYPOGRAPHY
+// ==========================================================================
+
+//change these mixin names to the font name if you like
+@mixin baseFont { font-family: $baseFontStack; }
+@mixin accentFont {font-family: $accentFontStack; }
+
+body {
+	font-size: 100%; // ~= 16px
+	@include baseFont;
+	color: $bodyColor;
+}
+
+p {
+	line-height: $pLineHeight;
+	margin: 0 0 $pSpacer;
+}
+
+	blockquote {
+		margin-top: 0;
+		margin-bottom: $blockquoteSpacer;
+		font-size: $blockquoteSize;
+		line-height: $blockquoteLineHeight;
+		text-transform: uppercase;
+		@include accentFont;
+	}
+
+	em { font-style: italic;}
+
+	.intro {
+		margin-bottom: $introSpacer;
+		font-size: $introSize;
+		line-height: $introLineHeight;
+		@include accentFont;
+	}
+
+//LISTS 
+// ---------------------------------------------------------------------------
+ul, 
+ol, 
+dl { 
+	margin: 0 0 $listSpacer; 
+}
+	
+	li, 
+	dd { margin-bottom: $listItemSpacer;}
+
+nav ul,
+form ul {
+	list-style-type: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+	nav li,
+	form li {margin-bottom: 0;}
+
+// HEADINGS
+// ---------------------------------------------------------------------------
+// Use the secondary classes when you need to style without changing semantics
+
+h2, h3, h4, h5, h6,
+.beta, .gamma, .delta, .epsilon, .zeta {
+	@include accenFont;
+	font-weight: bold; 
+}
+
+h1, .alpha {
+	margin: 0 0 $h1Spacer;
+	font-size: $h1Size;
+	line-height: $h1LineHeight;
+	font-weight: normal;
+}
+
+h2, .beta {
+	margin: 0 0 $h2Spacer;
+	font-size: $h2Size;
+	line-height: $h2LineHeight;
+}
+
+h3, .gamma {
+	margin: 0 0 $h3Spacer;
+	font-size: $h3Size;
+	line-height: $h3LineHeight;
+}
+
+h4, .delta {
+	margin: 0 0 $h4Spacer;
+	font-size: $h4Size;
+	line-height: $h4LineHeight;
+}
+
+h5, .epsilon {
+	margin: 0 0 $h5Spacer;
+	font-size: $h5Size;
+	line-height: $h5LineHeight;
+	text-transform: uppercase;
+}
+
+h6, .zeta {
+	margin: 0 0 $h6Spacer;
+	font-size: $h6Size;
+	line-height: $h6LineHeight;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+// adjust margins for small screens
+@media only screen and (max-width: 480px) {
+	h1, .alpha { margin-bottom: $h1Spacer/2;}
+	h2, .beta { margin-bottom: $h2Spacer/2;}
+	h3, .gamma { margin-bottom: $h3Spacer/2;}
+	h4, .delta { margin-bottom: $h4Spacer/2;}
+	h5, .epsilon { margin-bottom: $h5Spacer/2;}
+	h6, .zeta { margin-bottom: $h6Spacer/2;}
+	.intro {font-size: 1.2em;}
+}
+
+// LINKS
+// ---------------------------------------------------------------------------
+a {
+	color: $linkColor;
+	text-decoration: none;
+	-webkit-transition: all $transOut;
+	transition: all $transOut;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: lighten($linkColor, 10);
+	-webkit-transition: all $transIn;
+	transition: all $transIn;
+}
+
+
+// HELPER CLASSES/MIXINS
+// ==========================================================================
+.text-center {text-align: center;}
+

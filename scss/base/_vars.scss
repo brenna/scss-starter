@@ -1,0 +1,100 @@
+// ==========================================================================
+// VARIABLES
+// ==========================================================================
+
+// COLOURS
+// ==========================================================================
+
+// Core Colours
+// eg. $orange:		#f16e20;
+
+// Supplementary Colours
+// eg. $orangeShadow:	#b14708;
+
+// Base Theme
+// you're probably going to want to change these
+// assigning to an existing colour var works well. eg. $linkColor: $orange;
+$linkColor: Tomato; 
+$bodyColor: #222; 
+$accentColor: SteelBlue;
+
+
+// GRID VARIABLES
+// ==========================================================================
+// requried for Foundation grid (see base/_grid.scss)
+
+$row-width: 1173px !default;
+$column-gutter: 50px !default;
+$total-columns: 12 !default;
+$mobileTotalColumns: 4 !default;
+$blockGridElements: 6 !default; // Highest number of block grid elements, Maximum of 24 supported
+
+$default-float: left !default; // Change this to 'right' for right-to-left languages
+$opposite-direction: right !default; // Change this to 'left' for right-to-left languages
+
+$small-screen: 768px !default;
+$medium-screen: 1279px !default;
+$xlarge-screen: 1441px !default;
+
+$small: "only screen and (min-width: #{$small-screen})";
+$medium: "only screen and (min-width: #{$medium-screen})";
+$xlarge: "only screen and (max-width: #{$xlarge-screen}";
+
+
+// GENERAL MEASUREMENTS
+// ==========================================================================
+
+// Default Transition timing and easing
+
+$transIn: 0.3s ease-in;   //add this to hover state
+$transOut: 0.2s ease-in; //add this to normal state
+
+/// Form Field sizing
+
+$fieldSpacer: 27/16*1em;
+$fieldHeight: 40/16*1em;
+$fieldPadding: 12/16*1em;
+
+// Default Border Radius and Box Shadow
+
+$radius: 4px;
+$shadow: 0 2px 2px 0 0 rgba(0,0,0, 0.2);
+
+
+// TYPOGRAPHY VARIABLES
+// ==========================================================================
+$baseFontStack: 'Helvetica','Arial', sans-serif;
+$accentFontStack: 'Georgia', 'Times New Roman', serif;
+
+$pLineHeight: 			1.6;
+$pSpacer: 				1.6em;
+
+$introSize: 			22/16*1em;
+$introLineHeight:		1.5em;	
+$introSpacer: 			1.4em;
+
+$blockquoteSize: 		20/16*1em;
+$blockquoteLineHeight: 	1.35em;
+$blockquoteSpacer:		1.25em;
+
+$listSpacer: 			$pSpacer;
+$listItemSpacer:		0.5em;
+
+$h1Size:		30/16*1em;
+$h1LineHeight:	1.2em;
+$h1Spacer:		0.67em;
+$h2Size:		30/16*1em;
+$h2LineHeight:	1.2em;
+$h2Spacer:		1.5em;		
+$h3Size:		24/16*1em;
+$h3LineHeight:	1.2em;
+$h3Spacer:		1.9em;		
+$h4Size:		20/16*1em;
+$h4LineHeight:  1.3em;
+$h4Spacer:		1.25em;		
+$h5Size:		18/16*1em;
+$h5LineHeight:	1.4em;
+$h5Spacer:		1.4em;		
+$h6Size:		13/16*1em;
+$h6LineHeight:	1.6em;
+$h6Spacer:		2.3em;	
